@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta Charest="utf-8">
+    <title>Punchline</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/popper/popper.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container card-body">
+            <%if(navbarre){%>
+                <% include navbarre/navbarre.ejs %>
+            <%}%>
+        </div>
+    </header>
+
+        <div class="container">
+            <!--<%=partiel%>-->
+            <%if(partiel == "generateur"){%>
+                <% include partiel/generateur.ejs %>
+            <%}%>
+            <%if(partiel == "ajouter"){%>
+                <% include partiel/ajouter.ejs %>
+            <%}%>
+            <%if(partiel == "identification"){%>
+                <% include partiel/identification.ejs %>
+            <%}%>
+        </div>
+    <footer>
+        <div class="container">
+            <% include footer/footer.ejs %>
+        </div>
+    </footer>
+</body>
+</html>
